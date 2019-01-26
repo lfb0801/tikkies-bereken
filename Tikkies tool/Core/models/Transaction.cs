@@ -7,6 +7,7 @@ namespace core.models
     public class Transaction
     {
         public Person WhoPaid { get; private set; }
+        public string Subject { get; private set; }
         public double Amount { get; private set; }
         public List<Person> FreeLoaders { get; private set; }
 

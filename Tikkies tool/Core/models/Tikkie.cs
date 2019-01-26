@@ -4,7 +4,10 @@ using System.Text;
 
 namespace core.models
 {
-    class Tikkie
+    public class Tikkie
     {
+        public Person From { get; private set; }
+        public Person To { get; private set; }
+        public double Amount { get; private set; }
     }
 }
