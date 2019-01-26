@@ -17,6 +17,5 @@ namespace core.models
             Amount = amount;
             FreeLoaders = freeLoaders;
         }
-
     }
 }
