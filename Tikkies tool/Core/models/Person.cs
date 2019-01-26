@@ -9,5 +9,9 @@ namespace core.models
         public string Name { get; private set; }
         public double AmmountPaid { get; private set; }
         public List<Transaction> TransactionsMade { get; private set; }
+
+        public Person(string name) {
+            Name = name;
+        }
     }
 }
