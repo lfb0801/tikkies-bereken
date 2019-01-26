@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "Core\core.csproj", "{C8E0B672-9ED1-4F13-BBAE-0C7DC8044B6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core", "Core\core.csproj", "{C8E0B672-9ED1-4F13-BBAE-0C7DC8044B6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logic", "logic\logic.csproj", "{BC439A0C-0F97-4D87-9C7A-007804A5B662}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "logic", "logic\logic.csproj", "{BC439A0C-0F97-4D87-9C7A-007804A5B662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dal", "dal\dal.csproj", "{BE638F34-0776-4B54-A904-791092A7536F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dal", "dal\dal.csproj", "{BE638F34-0776-4B54-A904-791092A7536F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapp", "webapp\webapp.csproj", "{E62B6229-5DB7-4F49-9883-E29352DE38D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{BE638F34-0776-4B54-A904-791092A7536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE638F34-0776-4B54-A904-791092A7536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE638F34-0776-4B54-A904-791092A7536F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62B6229-5DB7-4F49-9883-E29352DE38D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62B6229-5DB7-4F49-9883-E29352DE38D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62B6229-5DB7-4F49-9883-E29352DE38D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62B6229-5DB7-4F49-9883-E29352DE38D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
