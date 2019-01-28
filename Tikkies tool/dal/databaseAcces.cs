@@ -6,9 +6,9 @@ using dal.repositories;
 
 namespace dal
 {
-    public class databaseAcces
+    public static class databaseAcces
     {
-        ITransactionRepository transaction = new TransactionRepository();
-        IPersonRepository person = new PersonRepository();
+        public static ITransactionRepository transaction = new TransactionRepository();
+        public static IPersonRepository person = new PersonRepository();
     }
 }

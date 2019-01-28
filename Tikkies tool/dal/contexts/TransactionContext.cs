@@ -33,7 +33,7 @@ namespace dal.contexts
             throw new NotImplementedException();
         }
 
-        public Transaction readByPerson(Person person)
+        public List<Transaction> readByPerson(Person person)
         {
             throw new NotImplementedException();
         }
