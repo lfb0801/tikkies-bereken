@@ -13,5 +13,9 @@ namespace core.models
         public Person(string name) {
             Name = name;
         }
+
+        public Person()
+        {
+        }
     }
 }

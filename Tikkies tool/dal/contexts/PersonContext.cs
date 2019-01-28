@@ -1,5 +1,7 @@
 ﻿using core.interfaces.repositories;
 using core.models;
+using dal.tools;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,7 +27,18 @@ namespace dal.contexts
 
         public Person read(int id)
         {
-            throw new NotImplementedException();
+            Person output = new Person();
+            try
+            {
+                string query = "";
+                MySqlParameter[] parameters = { new MySqlParameter("@Id", id) };
+
+                Executer.ExecuteQuery(out output, query, parameters);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public List<Person> readAll()
