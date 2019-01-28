@@ -6,13 +6,11 @@ using System.Text;
 
 namespace logic
 {
-    public class TikkieFactory
+    public static class TikkieFactory
     {
-        TransactionDatabase transactionDatabase = new TransactionDatabase();
-        List<Transaction> Transactions;
-        public Tikkie getTikkies() {
-
-            return new Tikkie();
+        internal static void GenerateMyTikkies(Person person)
+        {
+            throw new NotImplementedException();
         }
     }
 }

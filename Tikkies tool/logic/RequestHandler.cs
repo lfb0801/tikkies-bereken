@@ -11,7 +11,8 @@ namespace logic
     {
         public List<Tikkie> GetMyTikkies(string name)
         {
-            throw new NotImplementedException();
+            Person person = databaseAcces.person.readByName(name);
+            TikkieFactory.GenerateMyTikkies(person);
         }
 
         public List<Transaction> pullAllTransactions()
