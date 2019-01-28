@@ -12,17 +12,48 @@ namespace dal.contexts
     {
         public void create(Person entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query = "INSERT @Name INTO person";
+                MySqlParameter[] parameters = { new MySqlParameter("@Name", entity.Name) };
+
+                Executer.ExecuteNonQuery(query,parameters);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void delete(Person entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query = "DELETE FROM person WHERE ID=@Id";
+                MySqlParameter[] parameters = { new MySqlParameter("@Id", entity.Id) };
+
+                Executer.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void deleteById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query = "DELETE FROM person WHERE ID=@Id";
+                MySqlParameter[] parameters = { new MySqlParameter("@Id", id) };
+
+                Executer.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         public Person read(int id)
@@ -30,7 +61,7 @@ namespace dal.contexts
             Person output = new Person();
             try
             {
-                string query = "";
+                string query = "SELECT * FROM person WHERE ID=@Id";
                 MySqlParameter[] parameters = { new MySqlParameter("@Id", id) };
 
                 Executer.ExecuteQuery(out output, query, parameters);
@@ -39,21 +70,58 @@ namespace dal.contexts
             {
                 throw;
             }
+
+            return output;
         }
 
         public List<Person> readAll()
         {
-            throw new NotImplementedException();
+            List<Person> output = new List<Person>();
+            try
+            {
+                string query = "SELECT * FROM person";
+
+                Executer.ExecuteQuery(out output, query);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return output;
         }
 
         public Person readByName(string name)
         {
-            throw new NotImplementedException();
+            Person output = new Person();
+            try
+            {
+                string query = "SELECT * FROM person WHERE name=@Name";
+                MySqlParameter[] parameters = { new MySqlParameter("@Name", name) };
+
+                Executer.ExecuteQuery(out output, query, parameters);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return output;
         }
 
         public void update(Person entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string query = "UPDATE person SET Name=@Name WHERE ID=@Id";
+                MySqlParameter[] parameters = { new MySqlParameter("@Name", entity.Name), new MySqlParameter("@Id", entity.Id) };
+
+                Executer.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
