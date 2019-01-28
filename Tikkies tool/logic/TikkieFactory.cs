@@ -8,7 +8,7 @@ namespace logic
 {
     public static class TikkieFactory
     {
-        internal static void GenerateMyTikkies(Person person)
+        public static List<Tikkie> GenerateMyTikkies(Person person)
         {
             throw new NotImplementedException();
         }

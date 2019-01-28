@@ -12,7 +12,7 @@ namespace logic
         public List<Tikkie> GetMyTikkies(string name)
         {
             Person person = databaseAcces.person.readByName(name);
-            TikkieFactory.GenerateMyTikkies(person);
+            return TikkieFactory.GenerateMyTikkies(person);
         }
 
         public List<Transaction> pullAllTransactions()
