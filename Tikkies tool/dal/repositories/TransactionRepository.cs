@@ -36,14 +36,14 @@ namespace dal.repositories
             return ctx.readAll();
         }
 
-        public Transaction readByPerson(Person person)
-        {
-            return ctx.readByPerson(person);
-        }
-
         public void update(Transaction entity)
         {
             ctx.update(entity);
+        }
+
+        List<Transaction> ITransactionRepository.readByPerson(Person person)
+        {
+            return ctx.readByPerson(person);
         }
     }
 }

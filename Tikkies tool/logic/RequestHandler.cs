@@ -1,5 +1,6 @@
 ﻿using core.interfaces;
 using core.models;
+using dal;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,17 +16,17 @@ namespace logic
 
         public List<Transaction> pullAllTransactions()
         {
-            throw new NotImplementedException();
+            return databaseAcces.transaction.readAll();
         }
 
         public List<Transaction> pullMyTransactions(string name)
         {
-            throw new NotImplementedException();
+            return (List<Transaction>)databaseAcces.transaction.readByPerson(databaseAcces.person.readByName(name));
         }
 
         public void pushTransaction(Transaction newTransaction)
         {
-            throw new NotImplementedException();
+            databaseAcces.transaction.create(newTransaction);
         }
     }
 }
