@@ -8,5 +8,6 @@ namespace core.interfaces.repositories
     public interface ITransactionRepository : ICRUD<Transaction>
     {
         List<Transaction> readByPerson(Person person);
+        void addFreeLoaders(List<Person> people);
     }
 }
